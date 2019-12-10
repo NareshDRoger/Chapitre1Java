@@ -18,12 +18,16 @@ public class Main {
                 if (args[i].equals("/a")) {
                     System.out.println("Searching for an anagram of : " + args[i - 1]);
                     System.out.println("\t" + Treatment.searchAnagram(args[i - 1], Arrays.copyOfRange(args, i + 1, args.length)));
-                } else if (args[i].equals("/o")) {
+                }
+                else if (args[i].equals("/o")) {
                     for(int j=i+1; j<args.length; j++) {
                         System.out.println("Deleting characters from "+ args[j] + " in "+args[i-1]);
                         args[i-1] = Treatment.deleteLettersFromString(args[i-1],args[j]);
                         System.out.println("Here is your new string : "+ args[i-1]);
                     }
+                }
+                else if (args[i].equals("/f")) {
+                    System.out.println("Occurence of "+args[i-1]+" = "+Treatment.countOccurence(args[i-1], Arrays.copyOfRange(args, i + 1, args.length)));
                 }
             }
         }

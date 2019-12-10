@@ -79,4 +79,13 @@ public class Treatment {
         return res;
     }
 
+    public static int countOccurence (String string, String [] stringTab) {
+        int counter = 0;
+        for(String aux : stringTab) {
+            if (aux.equals(string))
+                counter++;
+        }
+        return counter;
+    }
+
 }
