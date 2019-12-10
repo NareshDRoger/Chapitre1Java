@@ -27,6 +27,9 @@ public class Program {
         catch (IOException e){
             throw new IOException("Problem reading a line",e);
         }
+        finally {
+            reader. close();
+        }
     }
 
     public void printMap() {
